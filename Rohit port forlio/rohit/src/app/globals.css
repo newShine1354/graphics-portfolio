@@ -2,32 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* .box { */
+/* height: 901px; */
+/* width: 901px; */
+/* position: relative; */
+/* z-index: -1; */
+/* } */
+
+/* .box .ellipse {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgb(255, 0, 0) 0%,
+    rgb(234.6, 0, 255) 50.52%,
+    rgb(0, 33.49, 209.31) 100%
+  );
+  border-radius: 450.5px;
+  filter: blur(336px);
+  height: 501px;
+  left: 0;
+  opacity: 0.4;
+  position: absolute;
+  z-index: 30;
+  /* top: 0; */
+/* width: 501px; */
+/* }  */
+
+.nav-text {
+  @apply cursor-pointer hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-[#6b12e6] hover:via-[#eb01f3] hover:to-[#fc0120];
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.designed-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#6b12e6] via-[#eb01f3] to-[#fc0120];
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+progress::-moz-progress-bar {
+  background: blue;
+  border-radius: 5px;
+
+}
+progress::-webkit-progress-value {
+  /* background: blue; */
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #6b12e6, #eb01f3, #fc0120);
+
+
+}
+progress {
+  color: blue;
+  border-radius: 5px;
+
+}
+progress::-webkit-progress-bar {
+  background-color: #8F8F8F;
+  height: 10px;
+  border-radius: 5px;
+  /* width: 100%; */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
